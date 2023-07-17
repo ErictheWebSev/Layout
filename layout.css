@@ -1,0 +1,335 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 12px;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --white: #f9f9f9;
+    --darkwhite: #ddd;
+    --pink: rgb(226, 28, 61);
+    --lightdark: #3f3f3f;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: var(--white);
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+.header {
+    width: 100vw;
+    background: var(--white);
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    top: -5px;
+}
+
+nav ul li {
+    display: inline;
+    padding: 15px;
+}
+
+nav ul li a {
+    color: var(--lightdark);
+}
+
+nav ul li a:hover {
+    color: var(--pink);
+}
+
+.bar, .close {
+    display: none;
+}
+
+.link-last {
+    background: var(--pink);
+    border-radius: 30px;
+    padding: 10px;
+    color: var(--white);
+}
+
+
+.main {
+    background-image: url('./Chrysanthemum.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 0 0 0;
+    position: relative;
+}
+
+.text {
+    text-align: center;
+    color: var(--darkwhite);
+    line-height: 1.7;
+    margin-bottom: 5%;
+}
+
+.main .text h2 {
+    font-size: 36px;
+}
+.main .text p {
+    color: var(--darkwhite);
+}
+
+p {
+    line-height: 1.7;
+    color: var(--lightdark);
+}
+
+.btn-main {
+    width: 100px;
+    height: 40px;
+    border-radius: 30px;
+    color: white;
+    background: var(--pink);
+    border: none;
+    outline: none;
+    margin: 10px;
+}
+
+.btn-main:hover, .link-last:hover {
+    opacity: 0.8;
+    color: var(--white);
+}
+
+.boxes {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+}
+
+.box {
+    width: 20rem;
+    background: var(--white);
+    height: 15rem;
+    text-align: center;
+    display: block;
+    padding: 30px;
+
+}
+
+.box .fa {
+    color: var(--pink);
+    font-size: 20px;
+    margin: 0 10px 10px;
+}
+
+.box h3 {
+    line-height: 50px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+
+.box:nth-child(2) {
+    background: var(--darkwhite);
+}
+
+.section1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 5% 0;
+    width: 100%;
+}
+
+.section1 h2 {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.con {
+    display: flex;
+    width: 80%;
+    margin: 15px;
+    padding: 20px;
+}
+
+img {
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+}
+
+
+.con1 {
+    padding: 10px 30px;
+    height: 200px;
+    text-align: left;
+}
+
+.con1 h3 {
+    color: var(--pink);
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+.section2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px 100px;
+    background-image: url('./Lighthouse.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.sub1 {
+    width: 25%;
+}
+
+.sup {
+    margin: 20px;
+    position: relative;
+}
+
+
+.sub3 {
+    width: 50%;
+    margin-left: 20px;
+}
+
+.width {
+    width: 40%;
+}
+
+.no-width {
+    width: 0%;
+}
+
+
+@media screen and (max-width: 660px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        width: 100vw;
+        height: 100vh;
+    }
+    
+    .header {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        width: 100%;
+    }
+
+    .dropdown {
+        display: block;
+        position: absolute;
+        z-index:  1;
+        background: var(--white);
+        box-shadow:  0 0 4px black;
+        height: 100vh;
+        left:  0;
+        text-align:  left;
+        transition:  0.7s;
+        width: 0%;
+        padding:  60px 0 0 0;
+        border-radius: 10px;
+        overflow-x: hidden;
+    }
+
+    li a {
+        display: block;
+        padding: 5px 10px;
+    }
+
+    .link-last {
+        border-radius: 0;
+    }
+
+
+    .close:hover {
+        color: var(--pink);
+    }
+
+    .bar, .close {
+        display: block;
+        position: absolute;
+        right: 25px;
+        font-size: 26px;
+        cursor: pointer;
+        font-weight: 300;
+        color: var(--lightdark);
+    }
+
+    .main {
+        width: 100%;
+        padding: 50rem 0 30rem 0;
+        position: relative;
+    }
+
+    .text {
+        display: block;
+        margin: 2rem 0 0 0;
+        position: absolute;
+        top: 0;
+    }
+
+    .boxes {
+        display: block;
+        /* margin: 0 0 41rem 0; */
+        position: absolute;
+        bottom:0;
+    }
+
+    .box {
+        overflow-x: hidden;
+        width: 100%;
+    }
+    
+    .con {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .section2 {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.068);
+    }
+
+    .sub1, .sub3 {
+        width: 100%;
+    }
+
+}
+
+
+
